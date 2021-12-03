@@ -1,0 +1,37 @@
+.root-container {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+
+    .main-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        .quote-box {
+            width: 40%;
+            padding: 35px;
+        }
+    }
+}
+
+@media(max-width:600px){
+    .root-container {
+        .main-box {
+            .quote-box {
+                width: 70%;
+            }
+        }
+    }
+}
+@media(max-width:350px){
+    .root-container {
+        .main-box {
+            .quote-box {
+                width: 90%;
+            }
+        }
+    }
+}
