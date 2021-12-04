@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Quote from '../utils/quote'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import Quote from '../utils/quote'
 import '../style/style.css'
 
 // const quoteIcon = <FontAwesomeIcon icon={['fas', 'quote-left']} />
@@ -69,12 +69,13 @@ class Root extends Component {
                             </h4>
 
                             <p
-                                className='d-flex justify-content-end'
-                                style={{ color: `${data.color}` }}>
+                                className='d-flex justify-content-end my-2'
+                                style={{ color: `${data.color}` }}
+                            >
                                 - {data.author ? data.author : 'Unknown'}
                             </p>
                         </div>
-                        <div className="d-flex justify-content-between">
+                        <div className="quote-footer d-flex justify-content-between">
                             <div className="share">
                                 <a
                                     className="btn btn-sm mx-1"
@@ -85,7 +86,8 @@ class Root extends Component {
                                     }}
                                     href="https://twitter.com/intent/tweet"
                                     target="_blank"
-                                >{twitterIcon}
+                                >
+                                    {twitterIcon}
                                 </a>
 
                                 <a
@@ -95,20 +97,25 @@ class Root extends Component {
                                         borderColor: `${data.color}`,
                                         color: '#fff'
                                     }}
-                                    href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank"
-                                // onClick={this.handleShareFB}
-                                >{fbIcon}
+                                    href="https://www.facebook.com/sharer/sharer.php?u=example.org"
+                                    target="_blank"
+
+                                >
+                                    {fbIcon}
                                 </a>
                             </div>
+
                             <button
-                                className='btn btn-sm '
+                                className='btn btn-sm'
                                 style={{
                                     backgroundColor: `${data.color}`,
                                     borderColor: `${data.color}`,
                                     color: '#fff'
                                 }}
                                 onClick={this.handleChangeQuote}
-                            >New Quote</button>
+                            >
+                                New Quote
+                            </button>
                         </div>
                     </div>
 
