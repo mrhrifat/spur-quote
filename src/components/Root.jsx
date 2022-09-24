@@ -110,7 +110,8 @@ class Root extends Component {
                                 style={{
                                     backgroundColor: `${data.color}`,
                                     borderColor: `${data.color}`,
-                                    color: '#fff'
+                                    color: '#fff',
+                                    box-shadow:'none'
                                 }}
                                 onClick={this.handleChangeQuote}
                             >
